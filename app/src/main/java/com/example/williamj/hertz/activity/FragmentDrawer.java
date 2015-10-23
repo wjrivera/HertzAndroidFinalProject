@@ -21,14 +21,6 @@ import com.example.williamj.hertz.R;
 import com.example.williamj.hertz.adapter.NavigationDrawerAdapter;
 import com.example.williamj.hertz.model.NavDrawerItem;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link FragmentDrawer.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link FragmentDrawer#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class FragmentDrawer extends Fragment {
 
     private static String TAG = FragmentDrawer.class.getSimpleName();
@@ -55,10 +47,12 @@ public class FragmentDrawer extends Fragment {
 
         // preparing navigation drawer items
         for (int i = 0; i < titles.length; i++) {
-            NavDrawerItem navItem = new NavDrawerItem();
-            navItem.setTitle(titles[i]);
-            data.add(navItem);
-        }
+
+                NavDrawerItem navItem = new NavDrawerItem();
+                navItem.setTitle(titles[i]);
+                data.add(navItem);
+            }
+
         return data;
     }
 

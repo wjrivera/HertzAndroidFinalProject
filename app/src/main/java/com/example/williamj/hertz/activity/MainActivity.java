@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
         setSupportActionBar(mToolbar);
+        assert getSupportActionBar() != null;       //to tell compiler it won't be null
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         drawerFragment = (FragmentDrawer)
@@ -82,12 +83,28 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 title = getString(R.string.title_home);
                 break;
             case 1:
-                fragment = new FriendsFragment();
-                title = getString(R.string.title_friends);
+                fragment = new AccountSettingsFragment();
+                title = getString(R.string.title_accountsettings);
                 break;
             case 2:
-                fragment = new MessagesFragment();
-                title = getString(R.string.title_messages);
+                fragment = new PreferencesFragment();
+                title = getString(R.string.title_preferences);
+                break;
+            case 3:
+                fragment = new DealsFragment();
+                title = getString(R.string.title_deals);
+                break;
+            case 4:
+                fragment = new RoadsideFragment();
+                title = getString(R.string.title_roadside);
+                break;
+            case 5:
+                fragment = new ContactFragment();
+                title = getString(R.string.title_contact);
+                break;
+            case 6:
+                fragment = new PrivacyFragment();
+                title = getString(R.string.title_privacy);
                 break;
             default:
                 break;
@@ -100,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             fragmentTransaction.commit();
 
             // set the toolbar title
+            assert getSupportActionBar() != null;       //to tell compiler it won't be null
             getSupportActionBar().setTitle(title);
         }
     }

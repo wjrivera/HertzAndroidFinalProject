@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 
 import com.example.williamj.hertz.R;
 
-public class HomeFragment extends Fragment {
+public class ContactFragment extends Fragment {
 
-    public HomeFragment() {
+    public ContactFragment() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_contact, container, false);
 
 
         // Inflate the layout for this fragment
@@ -40,5 +40,4 @@ public class HomeFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
-
 }

@@ -9,10 +9,9 @@ import android.view.ViewGroup;
 
 import com.example.williamj.hertz.R;
 
+public class DealsFragment extends Fragment {
 
-public class FriendsFragment extends Fragment {
-
-    public FriendsFragment() {
+    public DealsFragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +24,7 @@ public class FriendsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_friends, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_deals, container, false);
 
 
         // Inflate the layout for this fragment
