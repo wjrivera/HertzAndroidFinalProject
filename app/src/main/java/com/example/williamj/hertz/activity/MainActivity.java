@@ -15,6 +15,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 
 import com.example.williamj.hertz.R;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         return true;
     }
 
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -71,6 +73,30 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public void onDrawerItemSelected(View view, int position) {
 
         displayView(position);
+
+    }
+
+    //Click on Reserve a car
+    public void reserveButtonClick(View v){
+
+        Log.d("tag", "Reserver a car fragment called");
+        displayView(7);
+
+    }
+
+    //Click on Reserve a car
+    public void lookupReservationButtonClick(View v){
+
+        Log.d("tag", "Look up Reservation fragment called");
+        displayView(5);
+
+    }
+
+    //Click on Reserve a car
+    public void findLocationButtonClick(View v){
+
+        Log.d("tag", "Find Location Fragment called");
+        displayView(5);
 
     }
 
@@ -105,6 +131,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             case 6:
                 fragment = new PrivacyFragment();
                 title = getString(R.string.title_privacy);
+                break;
+            case 7:
+                fragment = new ReserveCarFragment();
+                title = getString(R.string.title_reservecar);
                 break;
             default:
                 break;

@@ -34,7 +34,22 @@
     <string name="title_roadside">Roadside Assitance</string>
     <string name="title_contact">Contact Us</string>
     <string name="title_privacy">Privacy Policy</string>
+    <string name="title_reservecar">Pick a date and location</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="privacy_policy_text">     We respect your privacy and are committed
+        to protecting the personal data we hold about you. This policy explains
+        what data we collect about you, how we collect it, the measures we take
+        to keep your data secure and the uses and disclosures we make of it.  We
+        also explain the options you have regarding your personal data. When you
+        request services from us, access our websites, utilize our mobile “apps” or
+        otherwise interact with us, for example, but without limitation, through
+        our kiosks, our in-vehicle or in-equipment technology, our official corporate
+        pages on third party social networks (such as Facebook) or the “apps” on
+        those pages, you consent to our collection, retention and use of your personal
+        data in the manner described in this policy and accept the risks outlined in
+        the Security section. You can quickly review the key topics by reading the
+        following overview or you may continue to scroll down to read more about an
+        issue or to read the full policy.</string>
 </resources>

@@ -6,12 +6,20 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.Calendar;
 
 import com.example.williamj.hertz.R;
 
-public class HomeFragment extends Fragment {
+public class ReserveCarFragment extends Fragment {
 
-    public HomeFragment() {
+
+
+
+
+    public ReserveCarFragment() {
         // Required empty public constructor
     }
 
@@ -21,13 +29,11 @@ public class HomeFragment extends Fragment {
 
     }
 
-
-
     //Edit fragment_home to change appearance of screen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_reservecar, container, false);
 
 
         // Inflate the layout for this fragment

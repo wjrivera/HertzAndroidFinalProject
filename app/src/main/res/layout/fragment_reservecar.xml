@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/greenlandscape"
-    tools:context="com.example.williamj.hertz.activity.HomeFragment">
+    tools:context="com.example.williamj.hertz.activity.ReserveCarFragment">
 
 
     <LinearLayout
@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:gravity="center"
         android:paddingBottom="10dp"
         android:paddingRight="10dp"
         android:paddingLeft="10dp"
@@ -22,7 +23,7 @@
             android:id="@+id/reserverCar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Reserve a Car"
+            android:text="Pick a Location"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
@@ -35,16 +36,29 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/lookupReservation"
+            android:id="@+id/datePick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Lookup Reservation"
+            android:text="Pick a Date"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
             android:paddingLeft="5dp"
-            android:onClick="lookupReservationButtonClick"/>
+            android:onClick="setDate" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/navigationBarColor"
+            android:text="OR"
+            android:textStyle="bold" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="5dp"
@@ -54,13 +68,14 @@
             android:id="@+id/findLocation"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Find Location"
+            android:text="Find Around Me"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
-            android:paddingLeft="5dp"
-            android:onClick="findLocationButtonClick"/>
+            android:paddingLeft="5dp"/>
+        <!-- Put in above button the following: android:onClick=" //location services// " -->
+
 
 
 
