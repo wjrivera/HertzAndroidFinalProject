@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/greenlandscape"
-    tools:context="com.example.williamj.hertz.activity.ReserveCarFragment">
+    tools:context="com.example.williamj.hertz.activity.VehicleFragment">
 
 
     <LinearLayout

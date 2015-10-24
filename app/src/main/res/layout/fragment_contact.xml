@@ -3,28 +3,130 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/greenlandscape"
     tools:context="com.example.williamj.hertz.activity.ContactFragment">
 
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="CONTACT"
-        android:textStyle="bold"/>
+        android:layout_alignParentBottom="true"
+        android:gravity="center|bottom"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
 
-    <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Edit fragment_contact.xml to change the appearance" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Click Number to Connect"
+            android:textSyle="bold"
+            android:background="?attr/colorAccent"
+            android:textSize="30dp" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/labelReservation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Reservations"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorPrimary"
+            android:paddingLeft="5dp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/reservationsNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="1-800-654-3131"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorAccent"
+            android:paddingLeft="5dp"
+            android:onClick="setDate" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/labelCarShop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Car in Shop?"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorPrimary"
+            android:paddingLeft="5dp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/labelCarShopNumber"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="1-800-704-4473"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorAccent"
+            android:paddingLeft="5dp"
+            android:onClick="setDate" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/labelAppHelp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="App Questions"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorPrimary"
+            android:paddingLeft="5dp" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/labelAppHelpEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="info@hertz.com"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorAccent"
+            android:paddingLeft="5dp"
+            android:onClick="setDate" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

@@ -2,29 +2,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/greenlandscape"
     android:orientation="vertical"
     tools:context="com.example.williamj.hertz.activity.DealsFragment">
 
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="DEALS"
-        android:textStyle="bold"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
-    <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Edit fragment_deals.xml to change the appearance" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Click Deals to Apply"
+            android:textSyle="bold"
+            android:background="?attr/colorAccent"
+            android:textSize="30dp" />
 
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioDeal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15% OFF WEEKLY CAR RENTALS"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radioDeal2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GO BIG THIS FALL: 30% OFF PREMIUM CARS" />
+
+                <RadioButton
+                    android:id="@+id/radioDeal3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GO BIG THIS FALL:15% OFF ECONOMY CARS"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radioDeal4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GO BIG THIS FALL: ONE FREE DAY, YOUR WAY!" />
+
+
+            </RadioGroup>
+        </LinearLayout>
+
+
+    </LinearLayout>
 </RelativeLayout>

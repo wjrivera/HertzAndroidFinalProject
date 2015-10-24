@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/greenlandscape"
+    tools:context="com.example.williamj.hertz.activity.FindLocationFragment">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp">
+
+            <Button
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:textSize="20dp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                android:textStyle="bold"
+                android:background="?attr/colorAccent" />
+            <View
+                android:layout_width="10dp"
+                android:layout_height="5dp" />
+
+            <Button
+                android:id="@+id/state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:textSize="20dp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                android:textStyle="bold"
+                android:background="?attr/colorAccent" />
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="5dp" />
+
+            <Button
+                android:id="@+id/airportCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Airport Code"
+                android:textSize="20dp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                android:textStyle="bold"
+                android:background="?attr/colorAccent" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textStyle="bold"/>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/vehiclePick"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Find Near Me"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorAccent"
+            android:paddingLeft="5dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

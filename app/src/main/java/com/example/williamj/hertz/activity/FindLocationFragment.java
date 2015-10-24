@@ -6,12 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import java.util.Calendar;
 
 import com.example.williamj.hertz.R;
 
-public class FindReservationFragment extends Fragment {
+public class FindLocationFragment extends Fragment {
 
-    public FindReservationFragment() {
+    public FindLocationFragment() {
         // Required empty public constructor
     }
 
@@ -21,12 +25,11 @@ public class FindReservationFragment extends Fragment {
 
     }
 
-
-
+    //Edit fragment_home to change appearance of screen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_find_reservation, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_find_location, container, false);
 
 
         // Inflate the layout for this fragment
@@ -42,4 +45,5 @@ public class FindReservationFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
+
 }
