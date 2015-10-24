@@ -2,33 +2,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/greenlandscape"
-    tools:context="com.example.williamj.hertz.activity.ReserveCarFragment">
+    android:layout_gravity="center"
+    tools:context="com.example.williamj.hertz.activity.FindReservationFragment">
+
 
 
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        >
-
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp">
 
         <Button
-            android:id="@+id/reserverCar"
-            android:layout_width="fill_parent"
+            android:id="@+id/editReservation"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pickup Location"
+            android:text="Edit Reservation"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
             android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:onClick="reserveButtonClick" />
         <View
             android:layout_width="0dp"
@@ -36,34 +36,21 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/datePick"
-            android:layout_width="fill_parent"
+            android:id="@+id/checkout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pick a Date &amp; TIME"
+            android:text="Checkout"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
             android:paddingLeft="5dp"
-            android:onClick="setDate" />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="5dp"
-            android:layout_weight="1" />
+            android:paddingRight="5dp"
+            android:onClick="reserveButtonClick" />
 
-        <Button
-            android:id="@+id/vehiclePick"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Pick a Vehicle"
-            android:textSize="20dp"
-            android:theme="@style/Widget.AppCompat.Button.Borderless"
-            android:textStyle="bold"
-            android:background="?attr/colorAccent"
-            android:paddingLeft="5dp"
-            android:onClick="findVehicleButtonClick" />
 
     </LinearLayout>
+
 
 
 </RelativeLayout>

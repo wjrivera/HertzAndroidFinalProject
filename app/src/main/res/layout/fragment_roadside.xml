@@ -3,28 +3,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/greenlandscape"
     tools:context="com.example.williamj.hertz.activity.RoadsideFragment">
 
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="ROADSIDE ASSISTANCE"
-        android:textStyle="bold"/>
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
 
-    <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Edit fragment_roadside.xml to change the appearance" />
+
+        <Button
+            android:id="@+id/reserverCar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Click number to connect"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorPrimary"
+            android:paddingLeft="5dp"
+            android:onClick="reserveButtonClick" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/datePick"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="1-800-654-5060"
+            android:textSize="20dp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textStyle="bold"
+            android:background="?attr/colorAccent"
+            android:paddingLeft="5dp"
+            android:onClick="setDate" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

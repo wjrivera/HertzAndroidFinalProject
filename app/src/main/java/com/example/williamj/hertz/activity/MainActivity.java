@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public void lookupReservationButtonClick(View v){
 
         Log.d("tag", "Look up Reservation fragment called");
-        displayView(5);
+        displayView(9);
 
     }
 
@@ -97,6 +97,21 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         Log.d("tag", "Find Location Fragment called");
         displayView(5);
+
+    }
+    //Click on Reserve a car
+    public void findVehicleButtonClick(View view){
+
+        Log.d("tag", "Find Vehicle");
+        displayView(8);
+
+    }
+
+    //Click on Home
+    public void goHomeButtonClick(View view){
+
+        Log.d("tag", "Home");
+        displayView(0);
 
     }
 
@@ -135,6 +150,14 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             case 7:
                 fragment = new ReserveCarFragment();
                 title = getString(R.string.title_reservecar);
+                break;
+            case 8:
+                fragment = new VehicleFragment();
+                title = getString(R.string.title_findvehicle);
+                break;
+            case 9:
+                fragment = new FindReservationFragment();
+                title = getString(R.string.title_findreservation);
                 break;
             default:
                 break;

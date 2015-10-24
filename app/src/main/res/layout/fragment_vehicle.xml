@@ -23,7 +23,7 @@
             android:id="@+id/reserverCar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pickup Location"
+            android:text="Sedan"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
@@ -39,7 +39,7 @@
             android:id="@+id/datePick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pick a Date &amp; TIME"
+            android:text="Pickup"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
@@ -55,13 +55,13 @@
             android:id="@+id/vehiclePick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pick a Vehicle"
+            android:text="Van"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
             android:paddingLeft="5dp"
-            android:onClick="findVehicleButtonClick" />
+            android:onClick="setDate" />
 
     </LinearLayout>
 

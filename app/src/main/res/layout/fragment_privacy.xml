@@ -3,6 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
     tools:context="com.example.williamj.hertz.activity.PrivacyFragment">
 
 
@@ -26,14 +29,18 @@
                 android:text="@string/privacy_policy_text" >
             </TextView>
 
-            <Button
-                android:id="@+id/btn_act"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="?attr/colorAccent"
-                android:text="Go Home" >
-            </Button>
+
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/btn_act"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorAccent"
+        android:onClick="goHomeButtonClick"
+        android:layout_alignParentBottom="true"
+        android:text="Go Home" >
+    </Button>
 
 </RelativeLayout>

@@ -3,7 +3,6 @@ package com.example.williamj.hertz.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +13,9 @@ import java.util.Calendar;
 
 import com.example.williamj.hertz.R;
 
-public class ReserveCarFragment extends Fragment {
+public class VehicleFragment extends Fragment {
 
-    public ReserveCarFragment() {
+    public VehicleFragment() {
         // Required empty public constructor
     }
 
@@ -30,21 +29,12 @@ public class ReserveCarFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_reservecar, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_vehicle, container, false);
 
 
         // Inflate the layout for this fragment
         return rootView;
     }
-
-//    //Click on Reserve a car
-//    public void findVehicleButtonClick(View view){
-//
-//        Log.d("tag", "Reserver a car fragment called");
-//        Fragment fragment = new VehicleFragment();
-//        String title = getString(R.string.title_home);
-//
-//    }
 
     @Override
     public void onAttach(Activity activity) {
