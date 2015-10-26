@@ -23,7 +23,7 @@
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
             android:text="Click Deals to Apply"
-            android:textSyle="bold"
+            android:textStyle="bold"
             android:background="?attr/colorAccent"
             android:textSize="30dp" />
 

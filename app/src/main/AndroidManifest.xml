@@ -10,9 +10,14 @@
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/app_name" >
+
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/MyMaterialTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

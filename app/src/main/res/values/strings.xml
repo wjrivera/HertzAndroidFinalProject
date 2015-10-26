@@ -54,4 +54,5 @@
         the Security section. You can quickly review the key topics by reading the
         following overview or you may continue to scroll down to read more about an
         issue or to read the full policy.</string>
+    <string name="title_activity_login">LoginActivity</string>
 </resources>
