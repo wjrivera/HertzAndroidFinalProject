@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     String adminPassword = new String("admin");
     Context context;
 
-
+    //Changed
     Button LoginButton;
 
 
@@ -67,11 +67,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 hideKeyboard();
 
-
-
-
-
-
                 _("Login Button hit");
                 String username = usernameInput.getText() + "";
                 String password = passwordInput.getText() + "";
@@ -102,35 +97,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
 
     public boolean validateEmail(String email) {
         matcher = pattern.matcher(email);
