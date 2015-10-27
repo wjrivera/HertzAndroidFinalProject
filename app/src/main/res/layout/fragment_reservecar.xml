@@ -28,8 +28,7 @@
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
-            android:paddingLeft="5dp"
-            android:onClick="reserveButtonClick" />
+            android:paddingLeft="5dp" />
         <View
             android:layout_width="0dp"
             android:layout_height="5dp"
@@ -44,8 +43,7 @@
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
-            android:paddingLeft="5dp"
-            android:onClick="setDate" />
+            android:paddingLeft="5dp"/>
         <View
             android:layout_width="0dp"
             android:layout_height="5dp"
