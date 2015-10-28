@@ -6,24 +6,23 @@
     tools:context="com.example.williamj.hertz.activity.AccountSettingsFragment">
 
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="100dp"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="45dp"
-        android:text="Account Settings"
-        android:textStyle="bold"/>
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        >
 
-    <TextView
-        android:layout_below="@id/label"
-        android:layout_centerInParent="true"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="12dp"
-        android:layout_marginTop="10dp"
-        android:gravity="center_horizontal"
-        android:text="Edit fragment_accountsettings.xml to change the appearance" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Account Settings - Under Construction"/>
+
+    </LinearLayout>
+
+
+
 </RelativeLayout>

@@ -9,12 +9,12 @@
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:layout_alignParentTop="true"
-        android:background="@color/textColorPrimary">
+        android:background="@color/colorPrimary">
 
         <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/ic_profile"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:src="@drawable/hertzlogomini"
             android:scaleType="fitCenter"
             android:layout_centerInParent="true" />
 
@@ -30,3 +30,5 @@
 
 
 </RelativeLayout>
+
+    <!-- Light Grey -->

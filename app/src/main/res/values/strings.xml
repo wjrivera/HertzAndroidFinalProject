@@ -5,6 +5,7 @@
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
 
+    <!-- Slide menu labels  -->
     <string name="nav_item_home">Home</string>
     <string name="nav_item_accountsettings">Account Settings</string>
     <string name="nav_item_preferences">Preferences</string>
@@ -27,11 +28,12 @@
 
     </string-array>
 
+    <!-- Toolbar menu labels  -->
     <string name="title_home">Home</string>
     <string name="title_accountsettings">Account Settings</string>
     <string name="title_preferences">Preferences</string>
     <string name="title_deals">Deals</string>
-    <string name="title_roadside">Roadside Assitance</string>
+    <string name="title_roadside">Roadside</string>
     <string name="title_contact">Contact Us</string>
     <string name="title_privacy">Privacy Policy</string>
     <string name="title_reservecar">Date and Location</string>

@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.williamj.hertz.R;
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //Changed
     Button LoginButton;
+    Button GuestButton;
 
 
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
@@ -60,6 +62,8 @@ public class LoginActivity extends AppCompatActivity {
         usernameInput = (EditText) findViewById(R.id.usernameInput);
         passwordInput = (EditText) findViewById(R.id.passwordInput);
         LoginButton = (Button) findViewById(R.id.LoginButton);
+        GuestButton = (Button) findViewById(R.id.guestButton);
+
 
         //If you press login button
         LoginButton.setOnClickListener(new View.OnClickListener() {
@@ -86,13 +90,26 @@ public class LoginActivity extends AppCompatActivity {
                 if(adminLogin.equals(username) && adminPassword.equals(password)){
 
                     _("You've logged in as admin");
-//                    Fragment fragment = null;
-//                    fragment = new HomeFragment();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
 
 
                 }
+
+            }
+        });
+
+
+        //If you press guest link
+        GuestButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideKeyboard();
+
+                _("You've logged in as guest");
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
 
             }
         });
