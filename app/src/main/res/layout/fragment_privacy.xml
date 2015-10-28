@@ -37,7 +37,7 @@
         android:id="@+id/btn_act"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorAccent"
+        android:background="@color/colorPrimary"
         android:onClick="goHomeButtonClick"
         android:layout_alignParentBottom="true"
         android:text="Go Home" >

@@ -45,7 +45,7 @@ public class FragmentDrawer extends Fragment {
         List<NavDrawerItem> data = new ArrayList<>();
 
 
-        // preparing navigation drawer items
+        // preparing navigation drawer items (Sliding menu labels)
         for (int i = 0; i < titles.length; i++) {
 
                 NavDrawerItem navItem = new NavDrawerItem();
@@ -113,6 +113,8 @@ public class FragmentDrawer extends Fragment {
                 toolbar.setAlpha(1 - slideOffset / 2);
             }
         };
+
+        //mDrawerToggle.setHomeAsUpIndicator(R.drawable.threebarmenu);
 
         mDrawerLayout.setDrawerListener(mDrawerToggle);
         mDrawerLayout.post(new Runnable() {

@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -121,43 +121,53 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         switch (position) {
             case 0:
                 fragment = new HomeFragment();
-                title = getString(R.string.title_home);
+                //title = getString(R.string.title_home);
+                title = " ";
                 break;
             case 1:
                 fragment = new AccountSettingsFragment();
-                title = getString(R.string.title_accountsettings);
+                //title = getString(R.string.title_accountsettings);
+                title = " ";
                 break;
             case 2:
                 fragment = new PreferencesFragment();
-                title = getString(R.string.title_preferences);
+                //title = getString(R.string.title_preferences);
+                title = " ";
                 break;
             case 3:
                 fragment = new DealsFragment();
-                title = getString(R.string.title_deals);
+                //title = getString(R.string.title_deals);
+                title = " ";
                 break;
             case 4:
                 fragment = new RoadsideFragment();
-                title = getString(R.string.title_roadside);
+                //title = getString(R.string.title_roadside);
+                title = " ";
                 break;
             case 5:
                 fragment = new ContactFragment();
-                title = getString(R.string.title_contact);
+                //title = getString(R.string.title_contact);
+                title = " ";
                 break;
             case 6:
                 fragment = new PrivacyFragment();
-                title = getString(R.string.title_privacy);
+                //title = getString(R.string.title_privacy);
+                title = " ";
                 break;
             case 7:
                 fragment = new ReserveCarFragment();
-                title = getString(R.string.title_reservecar);
+                //title = getString(R.string.title_reservecar);
+                title = " ";
                 break;
             case 8:
                 fragment = new VehicleFragment();
-                title = getString(R.string.title_findvehicle);
+                //title = getString(R.string.title_findvehicle);
+                title = " ";
                 break;
             case 9:
                 fragment = new FindReservationFragment();
-                title = getString(R.string.title_findreservation);
+                //title = getString(R.string.title_findreservation);
+                title = " ";
                 break;
             default:
                 break;
