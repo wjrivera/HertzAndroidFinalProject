@@ -3,7 +3,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/newcity"
     tools:context="com.example.williamj.hertz.activity.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingBottom="40dp"
+        android:paddingTop="50dp"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hertzlogonew">
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
 
 
     <LinearLayout
@@ -11,10 +34,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        >
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp">
 
 
         <Button
@@ -30,7 +53,7 @@
             android:onClick="reserveButtonClick" />
         <View
             android:layout_width="0dp"
-            android:layout_height="5dp"
+            android:layout_height="10dp"
             android:layout_weight="1" />
 
         <Button
@@ -41,12 +64,12 @@
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorPrimaryLight"
             android:paddingLeft="5dp"
             android:onClick="lookupReservationButtonClick"/>
         <View
             android:layout_width="0dp"
-            android:layout_height="5dp"
+            android:layout_height="10dp"
             android:layout_weight="1" />
 
         <Button
@@ -57,7 +80,7 @@
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorPrimaryLight"
             android:paddingLeft="5dp"
             android:onClick="findLocationButtonClick"/>
 

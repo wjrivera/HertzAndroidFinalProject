@@ -4,134 +4,185 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cityopenroad"
-    tools:context="com.example.williamj.hertz.activity.LoginActivity">
 
+    android:background="@drawable/newcity"
+    tools:context="com.example.williamj.hertz.activity.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="vertical">
+        android:layout_height="130dp"
+        android:paddingBottom="40dp"
+        android:paddingTop="50dp"
+        android:paddingLeft="125dp"
+        android:paddingRight="125dp"
+        android:id="@+id/HertzLogoLayout">
 
         <LinearLayout
-            android:id="@+id/container_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:orientation="vertical"
-            android:background="@drawable/hertzlogobarproper">
-
-
+            android:layout_height="match_parent"
+            android:background="@drawable/hertzlogonew">
 
         </LinearLayout>
 
-        <FrameLayout
-            android:id="@+id/container_body"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/welcomeTextLayout"
+        android:layout_below="@+id/HertzLogoLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:text="Welcome, Select Your Account"
+            android:background="#00000000"
+            android:textColor="@color/colorPrimaryLight"/>
+
+
 
 
     </LinearLayout>
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp">
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/LogoLayout"
+        android:layout_below="@+id/welcomeTextLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#000000"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:background="#FFFFFF"
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingBottom="20dp"
-                android:paddingTop="10dp"
-                android:orientation="vertical">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/leftarrow"/>
+        <View
+            android:layout_width="20dp"
+            android:layout_height="10dp" />
 
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/usernameInput"
-                    android:imeOptions="actionNext"
-                    android:singleLine="true"
-                    android:hint="Username / Email Address" />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/userlogo" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:ems="10"
-                    android:id="@+id/passwordInput"
-                    android:singleLine="true"
-                    android:hint="Password" />
+        <View
+            android:layout_width="20dp"
+            android:layout_height="10dp" />
 
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Remember Me"
-                    android:id="@+id/RememberMe" />
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:background="@drawable/rightarrow"/>
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:text="Login"
-                    android:textStyle="bold"
-                    android:id="@+id/LoginButton" />
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_height="60dp"
-                    android:paddingTop="10dp"
-                    android:id="@+id/forgotPasswordRegisterHolder">
-
-                    <Button
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Forgot Password?"
-                        android:layout_weight="1"
-                        android:textAllCaps="false"
-                        android:id="@+id/forgotPassword"
-                        android:background="@android:color/transparent"/>
-
-                    <Button
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-
-                        android:text="Enter as Guest"
-                        android:layout_weight="1"
-                        android:id="@+id/guestButton"
-                        android:textAllCaps="false"
-                        android:gravity="center"
-                        android:background="@android:color/transparent" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-        </LinearLayout>
 
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/LogoLayout"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/threedotsleft"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:text="Katie"
+            android:background="#00000000"
+            android:textColor="@color/colorPrimaryLight"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="37dp"
+        android:id="@+id/linearLayout3">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/whiteline"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Or Register for a New Account "
+            android:background="#00000000"
+            android:textColor="@color/colorPrimaryLight"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/whiteline"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="Join Hertz"
+            android:textAllCaps="false"
+            android:textSize="23dp"
+            android:textColor="@color/colorPrimaryLight"
+            android:gravity="center"
+            android:id="@+id/guestButton"
+            android:layout_below="@+id/linearLayout3" />
+
+
+    </LinearLayout>
 
 
 

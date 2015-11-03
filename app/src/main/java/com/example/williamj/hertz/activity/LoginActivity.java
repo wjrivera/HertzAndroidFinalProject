@@ -32,13 +32,13 @@ public class LoginActivity extends AppCompatActivity {
     Context context;
 
     //Changed
-    Button LoginButton;
+    //Button LoginButton;
     Button GuestButton;
 
 
-    private static final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
-    private Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-    private Matcher matcher;
+    //private static final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
+    //private Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+    //private Matcher matcher;
 
 
 
@@ -59,45 +59,45 @@ public class LoginActivity extends AppCompatActivity {
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
-        usernameInput = (EditText) findViewById(R.id.usernameInput);
-        passwordInput = (EditText) findViewById(R.id.passwordInput);
-        LoginButton = (Button) findViewById(R.id.LoginButton);
+        //usernameInput = (EditText) findViewById(R.id.usernameInput);
+        //passwordInput = (EditText) findViewById(R.id.passwordInput);
+        //LoginButton = (Button) findViewById(R.id.LoginButton);
         GuestButton = (Button) findViewById(R.id.guestButton);
 
 
         //If you press login button
-        LoginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                hideKeyboard();
-
-                _("Login Button hit");
-                String username = usernameInput.getText() + "";
-                String password = passwordInput.getText() + "";
-                _("Username: " + username);
-                _("Password: " + password);
-
-                //if you don't enter anything
-                if(username.length() == 0 || password.length() == 0){
-
-                    Toast.makeText(context, "Please fill in Username and Password", Toast.LENGTH_SHORT).show();
-                    return;
-
-                }
-
-                //Change this to the real user name and password
-                //if(username == "admin" && password == "admin"){
-                if(adminLogin.equals(username) && adminPassword.equals(password)){
-
-                    _("You've logged in as admin");
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(intent);
-
-
-                }
-
-            }
-        });
+//        LoginButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                hideKeyboard();
+//
+//                _("Login Button hit");
+//                String username = usernameInput.getText() + "";
+//                String password = passwordInput.getText() + "";
+//                _("Username: " + username);
+//                _("Password: " + password);
+//
+//                //if you don't enter anything
+//                if(username.length() == 0 || password.length() == 0){
+//
+//                    Toast.makeText(context, "Please fill in Username and Password", Toast.LENGTH_SHORT).show();
+//                    return;
+//
+//                }
+//
+//                //Change this to the real user name and password
+//                //if(username == "admin" && password == "admin"){
+//                if(adminLogin.equals(username) && adminPassword.equals(password)){
+//
+//                    _("You've logged in as admin");
+//                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//                    startActivity(intent);
+//
+//
+//                }
+//
+//            }
+//        });
 
 
         //If you press guest link
@@ -114,12 +114,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
     }
 
-    public boolean validateEmail(String email) {
-        matcher = pattern.matcher(email);
-        return matcher.matches();
-    }
+//    public boolean validateEmail(String email) {
+//        matcher = pattern.matcher(email);
+//        return matcher.matches();
+//    }
 
     public boolean validatePassword(String password) {
         return password.length() > 4;
