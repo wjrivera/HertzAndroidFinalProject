@@ -2,6 +2,7 @@ package com.example.williamj.hertz.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,26 +33,21 @@ public class LoginActivity extends AppCompatActivity {
     String adminPassword = new String("admin");
     Context context;
 
+    int userPick = 0;
+
     //Changed
     //Button LoginButton;
     Button GuestButton;
-
-
-    //private static final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
-    //private Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-    //private Matcher matcher;
-
-
+    ImageButton LeftArrowButton, RightArrowButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        //Set Application to full screen by removing action bar
-//        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
-//        getActionBar().hide();
-
         context = this;
         super.onCreate(savedInstanceState);
+
+        //Set screen to portrait mode
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         _("Login Activity Created");
 
@@ -63,6 +60,8 @@ public class LoginActivity extends AppCompatActivity {
         //passwordInput = (EditText) findViewById(R.id.passwordInput);
         //LoginButton = (Button) findViewById(R.id.LoginButton);
         GuestButton = (Button) findViewById(R.id.guestButton);
+        LeftArrowButton = (ImageButton) findViewById(R.id.leftarrowbutton);
+        RightArrowButton = (ImageButton) findViewById(R.id.rightarrowbutton);
 
 
         //If you press login button
@@ -114,16 +113,52 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        //If you press left arrow
+        LeftArrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideKeyboard();
 
-    }
+                if(userPick == 0){
 
-//    public boolean validateEmail(String email) {
-//        matcher = pattern.matcher(email);
-//        return matcher.matches();
-//    }
+                    //do nothing
 
-    public boolean validatePassword(String password) {
-        return password.length() > 4;
+                }
+                else if(userPick == 1){
+
+
+                }
+                else{
+
+
+                }
+
+            }
+        });
+
+        //If you press right arrow
+        RightArrowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideKeyboard();
+
+                if(userPick == 0){
+
+                }
+                else if(userPick == 1){
+
+
+                }
+                else{
+
+                    //do nothing
+
+                }
+
+            }
+        });
+
+
     }
 
     private void hideKeyboard(){

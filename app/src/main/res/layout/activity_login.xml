@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/newcity"
+    android:background="@drawable/sanfransmall"
     tools:context="com.example.williamj.hertz.activity.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="130dp"
-        android:paddingBottom="40dp"
-        android:paddingTop="50dp"
-        android:paddingLeft="125dp"
-        android:paddingRight="125dp"
+        android:paddingBottom="38dp"
+        android:paddingTop="38dp"
+        android:paddingLeft="110dp"
+        android:paddingRight="110dp"
         android:id="@+id/HertzLogoLayout">
 
         <LinearLayout
@@ -29,7 +29,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-
         android:orientation="horizontal"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
@@ -65,27 +64,30 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="20dp">
 
-        <ImageView
+        <ImageButton
             android:layout_width="30dp"
             android:layout_height="40dp"
+            android:id="@+id/leftarrowbutton"
             android:background="@drawable/leftarrow"/>
         <View
-            android:layout_width="20dp"
+            android:layout_width="30dp"
             android:layout_height="10dp" />
 
 
-        <ImageView
+        <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:background="@drawable/userlogo" />
+            android:background="@drawable/newuserlogo"
+            android:id="@+id/userlogobutton"/>
 
         <View
-            android:layout_width="20dp"
+            android:layout_width="30dp"
             android:layout_height="10dp" />
 
-        <ImageView
+        <ImageButton
             android:layout_width="30dp"
             android:layout_height="40dp"
+            android:id="@+id/rightarrowbutton"
             android:background="@drawable/rightarrow"/>
 
 
@@ -108,11 +110,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
-        android:layout_alignLeft="@+id/linearLayout"
-        android:layout_alignStart="@+id/linearLayout"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:id="@+id/linearLayout2">
 
         <TextView
@@ -125,12 +127,7 @@
             android:background="#00000000"
             android:textColor="@color/colorPrimaryLight"/>
 
-
-
     </LinearLayout>
-
-
-
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -163,8 +160,8 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="50dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/linearLayout3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp">
@@ -172,11 +169,11 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray"
             android:text="Join Hertz"
             android:textAllCaps="false"
-            android:textSize="23dp"
+            android:textSize="20dp"
             android:textColor="@color/colorPrimaryLight"
+            android:background="@drawable/button_border"
             android:gravity="center"
             android:id="@+id/guestButton"
             android:layout_below="@+id/linearLayout3" />

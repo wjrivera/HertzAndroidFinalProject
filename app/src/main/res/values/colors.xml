@@ -7,7 +7,7 @@
     !-- Light Grey -->
     <color name="colorPrimaryLight">#EDEDED</color>
     <!-- Dark Grey -->
-    <color name="textColorPrimary">#555555</color>
+    <color name="textColorPrimary">#FFFFFF</color>
     <!-- Light Yellow -->
     <color name="windowBackground">#FFFA9F</color>
     <!-- Light Grey -->

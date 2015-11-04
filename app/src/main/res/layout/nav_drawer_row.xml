@@ -8,6 +8,7 @@
         android:id="@+id/title"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryLight"
         android:paddingLeft="30dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
