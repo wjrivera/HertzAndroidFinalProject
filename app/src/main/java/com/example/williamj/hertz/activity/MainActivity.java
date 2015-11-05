@@ -173,6 +173,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 //title = getString(R.string.title_findreservation);
                 title = " ";
                 break;
+
             default:
                 break;
         }

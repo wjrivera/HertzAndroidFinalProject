@@ -13,12 +13,15 @@ import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.example.williamj.hertz.R;
 
@@ -33,12 +36,15 @@ public class LoginActivity extends AppCompatActivity {
     String adminPassword = new String("admin");
     Context context;
 
+    ViewFlipper viewFlipper, viewFlipper2;
+    Animation slide_in_left, slide_out_right;
+
     int userPick = 0;
 
     //Changed
     //Button LoginButton;
     Button GuestButton;
-    ImageButton LeftArrowButton, RightArrowButton;
+    ImageButton LeftArrowButton, RightArrowButton, UserLogoButton, UserLogoButton2, UserLogoButton3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +59,8 @@ public class LoginActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
+
+
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
@@ -62,6 +70,28 @@ public class LoginActivity extends AppCompatActivity {
         GuestButton = (Button) findViewById(R.id.guestButton);
         LeftArrowButton = (ImageButton) findViewById(R.id.leftarrowbutton);
         RightArrowButton = (ImageButton) findViewById(R.id.rightarrowbutton);
+
+        UserLogoButton = (ImageButton) findViewById(R.id.userlogobutton);
+        UserLogoButton2 = (ImageButton) findViewById(R.id.userlogobutton2);
+        UserLogoButton3 = (ImageButton) findViewById(R.id.userlogobutton3);
+
+
+
+
+
+        viewFlipper = (ViewFlipper) findViewById(R.id.viewflipper);
+        //viewFlipper2 = (ViewFlipper) findViewById(R.id.viewflipper2);
+
+        slide_in_left = AnimationUtils.loadAnimation(this,
+                android.R.anim.slide_in_left);
+        slide_out_right = AnimationUtils.loadAnimation(this,
+                android.R.anim.slide_out_right);
+
+        viewFlipper.setInAnimation(slide_in_left);
+        viewFlipper.setOutAnimation(slide_out_right);
+
+//        viewFlipper2.setInAnimation(slide_in_left);
+//        viewFlipper2.setOutAnimation(slide_out_right);
 
 
         //If you press login button
@@ -116,47 +146,53 @@ public class LoginActivity extends AppCompatActivity {
         //If you press left arrow
         LeftArrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                hideKeyboard();
-
-                if(userPick == 0){
-
-                    //do nothing
-
-                }
-                else if(userPick == 1){
-
-
-                }
-                else{
-
-
-                }
-
+            public void onClick(View arg0) {
+                viewFlipper.showPrevious();
+                //viewFlipper2.showPrevious();
             }
         });
 
         //If you press right arrow
         RightArrowButton.setOnClickListener(new View.OnClickListener() {
             @Override
+            public void onClick(View arg0) {
+                viewFlipper.showNext();
+                //viewFlipper2.showNext();
+            }
+        });
+
+        //If you press UserLogoButtons arrow
+        UserLogoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 hideKeyboard();
 
-                if(userPick == 0){
-
-                }
-                else if(userPick == 1){
-
-
-                }
-                else{
-
-                    //do nothing
-
-                }
-
+                _("You've logged in as User 1");
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
+        UserLogoButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideKeyboard();
+
+                _("You've logged in as User 2");
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        UserLogoButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideKeyboard();
+
+                _("You've logged in as User3");
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
