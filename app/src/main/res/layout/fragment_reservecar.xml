@@ -3,60 +3,93 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.williamj.hertz.activity.ReserveCarFragment">
+    tools:context="com.example.williamj.hertz.activity.ReserveCarFragment"
+    android:background="#3c373737">
 
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        >
+        android:layout_alignParentBottom="true">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp">
+
+        </View>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"/>
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp">
+
+        </View>
 
         <Button
-            android:id="@+id/reserverCar"
+            android:id="@+id/pickUpDate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pickup Location"
-            android:textSize="20dp"
+            android:text="Pickup Date: Friday, November 6, 2015 / 10:00AM"
+            android:textSize="15dp"
+            android:textAllCaps="false"
+            android:gravity="center"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:textColor="@color/colorPrimaryLight"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
-            android:paddingLeft="5dp" />
+            android:paddingRight="15dp"
+            android:background="#555555"
+            android:paddingLeft="5dp"
+            android:onClick="findVehicleButtonClick" />
         <View
-            android:layout_width="0dp"
-            android:layout_height="5dp"
-            android:layout_weight="1" />
+            android:layout_width="wrap_content"
+            android:layout_height="1dp">
+
+        </View>
 
         <Button
-            android:id="@+id/datePick"
+            android:id="@+id/dropOffDate"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pick a Date &amp; TIME"
-            android:textSize="20dp"
+            android:text="Dropoff Date: Tap to set"
+            android:textSize="15dp"
+            android:textAllCaps="false"
+            android:gravity="center"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
-            android:paddingLeft="5dp"/>
+            android:textColor="@color/colorPrimaryLight"
+            android:paddingRight="15dp"
+            android:background="#555555"
+            android:paddingLeft="5dp"
+            android:onClick="findVehicleButtonClick" />
         <View
-            android:layout_width="0dp"
-            android:layout_height="5dp"
-            android:layout_weight="1" />
+            android:layout_width="wrap_content"
+            android:layout_height="1dp">
+
+        </View>
 
         <Button
             android:id="@+id/vehiclePick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pick a Vehicle"
+            android:text="Done"
             android:textSize="20dp"
+            android:gravity="right|center"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
+            android:paddingRight="15dp"
+            android:textAllCaps="false"
+            android:background="#3c373737"
+            android:textColor="@color/colorPrimaryLight"
             android:paddingLeft="5dp"
             android:onClick="findVehicleButtonClick" />
 

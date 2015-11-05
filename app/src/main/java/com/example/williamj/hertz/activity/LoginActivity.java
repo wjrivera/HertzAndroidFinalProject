@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -28,7 +30,7 @@ import com.example.williamj.hertz.R;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener{
 
     EditText usernameInput;
     EditText passwordInput;
@@ -205,11 +207,52 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onDrawerItemSelected(View view, int position) {
+
+        displayView(position);
+
+    }
+
     //Makes it easier to comment throughout the program
     private void _(String s){
 
         Log.d("MyApp", "MainActivity" + "---\n" + s);
 
     }
+
+
+    private void displayView(int position) {
+        Fragment fragment = null;
+        String title = getString(R.string.app_name);
+        switch (position) {
+            case 0:
+                fragment = new HomeFragment();
+                //title = getString(R.string.title_home);
+                title = " ";
+                break;
+            case 1:
+                fragment = new AccountSettingsFragment();
+                //title = getString(R.string.title_accountsettings);
+                title = " ";
+                break;
+
+
+            default:
+                break;
+        }
+
+        if (fragment != null) {
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_body, fragment);
+            fragmentTransaction.commit();
+
+            // set the toolbar title
+            assert getSupportActionBar() != null;       //to tell compiler it won't be null
+            getSupportActionBar().setTitle(title);
+        }
+    }
+
 
 }
