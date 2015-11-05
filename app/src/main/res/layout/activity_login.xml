@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/sanfransmall"
+    android:background="@drawable/sanfran"
     tools:context="com.example.williamj.hertz.activity.LoginActivity">
 
     <LinearLayout
@@ -77,7 +77,7 @@
         <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:background="@drawable/newuserlogo"
+            android:background="@drawable/userlogo"
             android:id="@+id/userlogobutton"/>
 
         <View
