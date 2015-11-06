@@ -30,6 +30,8 @@ import com.example.williamj.hertz.R;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
 public class LoginActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener{
 
     EditText usernameInput;
@@ -50,6 +52,8 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
 
         context = this;
         super.onCreate(savedInstanceState);
@@ -140,6 +144,7 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
                 _("You've logged in as guest");
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
 
 
             }
@@ -172,6 +177,7 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
                 _("You've logged in as User 1");
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         UserLogoButton2.setOnClickListener(new View.OnClickListener() {
@@ -182,6 +188,7 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
                 _("You've logged in as User 2");
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
         UserLogoButton3.setOnClickListener(new View.OnClickListener() {
@@ -192,12 +199,15 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
                 _("You've logged in as User3");
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
 
 
     }
+
+
 
     private void hideKeyboard(){
         View view = getCurrentFocus();

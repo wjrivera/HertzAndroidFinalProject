@@ -19,12 +19,21 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.example.williamj.hertz.R;
+import com.parse.Parse;
+import com.parse.ParseACL;
+import com.parse.ParseException;
+import com.parse.ParseInstallation;
+import com.parse.ParseUser;
+import com.parse.SaveCallback;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
     private static String TAG = MainActivity.class.getSimpleName();
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
+
+    FragmentManager manager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         //Set screen to portrait mode
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
+
+        _("Set Content View done");
+
+        manager = getSupportFragmentManager();
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
@@ -45,10 +58,49 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), mToolbar);
         drawerFragment.setDrawerListener(this);
 
+        _("Drawer Fragments Created done");
+
         // display the first navigation drawer view on app launch
         displayView(0);
 
+        _("Display View done");
+
+// Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+
+        // Add your initialization code here
+        Parse.initialize(this, "Ip81WvPKbI8cBr3xGyvdXvMBIuRzStfiqnW3NvzX", "4cRFxgZIJqRkfIKKkWbc2cDAjwAt6kxRH5tftC7m");
+        ParseInstallation.getCurrentInstallation().saveInBackground();
+
+        _("Parse done");
+
+
+
     }
+
+    @Override
+    public void onBackPressed() {
+
+
+        int count = getFragmentManager().getBackStackEntryCount();
+
+        if (count == 0) {
+            super.onBackPressed();
+            //additional code
+        } else {
+            getFragmentManager().popBackStack();
+        }
+
+
+            //moveTaskToBack(true);
+
+
+
+
+
+    }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -119,6 +171,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     }
 
+    //Makes it easier to comment throughout the program
+    private void _(String s){
+
+        Log.d("MyApp", "MainActivity" + "---\n" + s);
+
+    }
+
     private void displayView(int position) {
         Fragment fragment = null;
         String title = getString(R.string.app_name);
@@ -126,7 +185,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             case 0:
                 fragment = new HomeFragment();
                 //title = getString(R.string.title_home);
-                title = " ";
+                title = "   ";
                 break;
             case 1:
                 fragment = new AccountSettingsFragment();

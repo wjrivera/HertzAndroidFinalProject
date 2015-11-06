@@ -11,18 +11,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        >
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp"
+        android:paddingRight="40dp"
+        android:paddingLeft="40dp">
 
 
         <Button
-            android:id="@+id/reserverCar"
+            android:id="@+id/luxurypick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Sedan"
+            android:text="Luxury"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
@@ -30,34 +29,37 @@
             android:paddingLeft="5dp"/>
         <View
             android:layout_width="0dp"
-            android:layout_height="5dp"
+            android:layout_height="10dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/datePick"
+            android:id="@+id/sedanpick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Pickup"
+            android:text="Sedan"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
-            android:paddingLeft="5dp" />
+            android:background="@color/colorPrimaryLight"
+            android:paddingLeft="5dp"/>
         <View
             android:layout_width="0dp"
-            android:layout_height="5dp"
+            android:layout_height="10dp"
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/vehiclePick"
+            android:id="@+id/minivanpick"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Van"
+            android:text="Mini Van"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
-            android:background="@color/colorPrimary"
-            android:paddingLeft="5dp" />
+            android:background="@color/colorPrimaryLight"
+            android:paddingLeft="5dp"/>
+
+
+
 
     </LinearLayout>
 

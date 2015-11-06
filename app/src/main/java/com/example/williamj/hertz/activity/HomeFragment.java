@@ -22,7 +22,6 @@ public class HomeFragment extends Fragment {
     }
 
 
-
     //Edit fragment_home to change appearance of screen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
