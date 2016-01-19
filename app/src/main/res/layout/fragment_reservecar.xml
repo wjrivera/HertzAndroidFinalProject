@@ -6,12 +6,36 @@
     tools:context="com.example.williamj.hertz.activity.ReserveCarFragment"
     android:background="#3c373737">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="vertical">
+
+            <DatePicker
+                android:id="@+id/pickerdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </ScrollView>
+
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
+
+
 
         <ImageView
             android:layout_width="wrap_content"
@@ -35,42 +59,7 @@
 
         </View>
 
-        <Button
-            android:id="@+id/pickUpDate"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Pickup Date: Friday, November 6, 2015 / 10:00AM"
-            android:textSize="15dp"
-            android:textAllCaps="false"
-            android:gravity="center"
-            android:theme="@style/Widget.AppCompat.Button.Borderless"
-            android:textColor="@color/colorPrimaryLight"
-            android:textStyle="bold"
-            android:paddingRight="15dp"
-            android:background="#555555"
-            android:paddingLeft="5dp"
-            android:onClick="findVehicleButtonClick" />
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp">
 
-        </View>
-
-        <Button
-            android:id="@+id/dropOffDate"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Dropoff Date: Tap to set"
-            android:textSize="15dp"
-            android:textAllCaps="false"
-            android:gravity="center"
-            android:theme="@style/Widget.AppCompat.Button.Borderless"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryLight"
-            android:paddingRight="15dp"
-            android:background="#555555"
-            android:paddingLeft="5dp"
-            android:onClick="findVehicleButtonClick" />
         <View
             android:layout_width="wrap_content"
             android:layout_height="1dp">

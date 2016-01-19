@@ -2,6 +2,7 @@ package com.example.williamj.hertz.activity;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.app.Activity;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
@@ -10,6 +11,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.DatePicker;
+import android.widget.DatePicker.OnDateChangedListener;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +21,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+
+import java.util.Calendar;
 
 import com.example.williamj.hertz.R;
 import com.parse.Parse;
@@ -32,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
 
+    DatePicker pickerDate;
+    TextView info;
+
     FragmentManager manager;
 
 
@@ -44,6 +53,45 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         setContentView(R.layout.activity_main);
 
         _("Set Content View done");
+
+        info = (TextView)findViewById(R.id.info);
+        pickerDate = (DatePicker)findViewById(R.id.pickerdate);
+
+        Calendar today = Calendar.getInstance();
+
+
+        try {
+
+            pickerDate.init(
+                    today.get(Calendar.YEAR),
+                    today.get(Calendar.MONTH),
+                    today.get(Calendar.DAY_OF_MONTH),
+                    new OnDateChangedListener() {
+
+                        @Override
+                        public void onDateChanged(DatePicker view,
+                                                  int year, int monthOfYear, int dayOfMonth) {
+                            Toast.makeText(getApplicationContext(),
+                                    "onDateChanged", Toast.LENGTH_SHORT).show();
+
+//                            info.setText(
+//                                    "Year: " + year + "\n" +
+//                                            "Month of Year: " + monthOfYear + "\n" +
+//                                            "Day of Month: " + dayOfMonth);
+
+                        }
+                    });
+        }catch(NullPointerException e){
+
+            _("Null pointer exception");
+
+        }
+
+
+
+
+
+
 
         manager = getSupportFragmentManager();
 
