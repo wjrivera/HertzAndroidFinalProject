@@ -1,5 +1,6 @@
 package com.example.williamj.hertz.activity;
 
+import android.app.DatePickerDialog;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.app.Activity;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.DatePicker.OnDateChangedListener;
 import android.widget.TextView;
@@ -37,9 +39,15 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private static String TAG = MainActivity.class.getSimpleName();
     private Toolbar mToolbar;
     private FragmentDrawer drawerFragment;
+    private Button pickUpDate = null;
+    private Button dropOffDate = null;
 
-    DatePicker pickerDate;
-    TextView info;
+    DatePicker datePicker;
+    TextView displayDate;
+    Button changeDate;
+    int month;
+
+
 
     FragmentManager manager;
 
@@ -54,40 +62,25 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         _("Set Content View done");
 
-        info = (TextView)findViewById(R.id.info);
-        pickerDate = (DatePicker)findViewById(R.id.pickerdate);
 
-        Calendar today = Calendar.getInstance();
-
-
-        try {
-
-            pickerDate.init(
-                    today.get(Calendar.YEAR),
-                    today.get(Calendar.MONTH),
-                    today.get(Calendar.DAY_OF_MONTH),
-                    new OnDateChangedListener() {
-
-                        @Override
-                        public void onDateChanged(DatePicker view,
-                                                  int year, int monthOfYear, int dayOfMonth) {
-                            Toast.makeText(getApplicationContext(),
-                                    "onDateChanged", Toast.LENGTH_SHORT).show();
-
-//                            info.setText(
-//                                    "Year: " + year + "\n" +
-//                                            "Month of Year: " + monthOfYear + "\n" +
-//                                            "Day of Month: " + dayOfMonth);
-
-                        }
-                    });
-        }catch(NullPointerException e){
-
-            _("Null pointer exception");
-
-        }
+        //pickUpDate = (Button) findViewById(R.id.pickUpDate);
+        //dropOffDate = (Button) findViewById(R.id.dropOffDate);
+        //pickUpDate.setOnClickListener(this);
 
 
+
+//        datePicker = (DatePicker) findViewById(R.id.datePicker);
+//        displayDate = (TextView) findViewById(R.id.display_date);
+//        displayDate.setText("Display Date");
+//        changeDate = (Button) findViewById(R.id.change_date_button);
+//
+//        displayDate.setText(currentDate());
+//        changeDate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                displayDate.setText(currentDate());
+//            }
+//        });
 
 
 
@@ -125,6 +118,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
 
     }
+
+//    public String currentDate() {
+//        StringBuilder mcurrentDate = new StringBuilder();
+//        month = datePicker.getMonth() + 1;
+//        mcurrentDate.append("Date: " + month + "/" + datePicker.getDayOfMonth() + "/" + datePicker.getYear());
+//        return mcurrentDate.toString();
+//    }
 
     @Override
     public void onBackPressed() {
@@ -296,4 +296,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             getSupportActionBar().setTitle(title);
         }
     }
+
+
 }
