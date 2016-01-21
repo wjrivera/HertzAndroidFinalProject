@@ -28,7 +28,7 @@
 
 
             <Button
-                android:id="@+id/change_date_button"
+                android:id="@+id/pickUpDate"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="Pickup Date: Friday, November 6, 2015 / 10:00AM"

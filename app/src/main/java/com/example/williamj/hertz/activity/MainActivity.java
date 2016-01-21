@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private Button pickUpDate = null;
     private Button dropOffDate = null;
 
-    DatePicker datePicker;
+    DatePicker datePicker;      //Need to initialize this
     TextView displayDate;
     Button changeDate;
     int month;
@@ -63,24 +63,24 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         _("Set Content View done");
 
 
-        //pickUpDate = (Button) findViewById(R.id.pickUpDate);
+        pickUpDate = (Button) findViewById(R.id.pickUpDate);
         //dropOffDate = (Button) findViewById(R.id.dropOffDate);
         //pickUpDate.setOnClickListener(this);
 
 
 
-//        datePicker = (DatePicker) findViewById(R.id.datePicker);
-//        displayDate = (TextView) findViewById(R.id.display_date);
-//        displayDate.setText("Display Date");
-//        changeDate = (Button) findViewById(R.id.change_date_button);
-//
-//        displayDate.setText(currentDate());
-//        changeDate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                displayDate.setText(currentDate());
-//            }
-//        });
+        datePicker = (DatePicker) findViewById(R.id.datePicker);
+        //displayDate = (TextView) findViewById(R.id.display_date);
+        //displayDate.setText("Display Date");
+        //changeDate = (Button) findViewById(R.id.change_date_button);
+
+        displayDate.setText(currentDate());
+        pickUpDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                displayDate.setText(currentDate());
+            }
+        });
 
 
 
@@ -119,12 +119,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     }
 
-//    public String currentDate() {
-//        StringBuilder mcurrentDate = new StringBuilder();
-//        month = datePicker.getMonth() + 1;
-//        mcurrentDate.append("Date: " + month + "/" + datePicker.getDayOfMonth() + "/" + datePicker.getYear());
-//        return mcurrentDate.toString();
-//    }
+    public String currentDate() {
+        StringBuilder mcurrentDate = new StringBuilder();
+        month = datePicker.getMonth() + 1;
+        mcurrentDate.append("Date: " + month + "/" + datePicker.getDayOfMonth() + "/" + datePicker.getYear());
+        return mcurrentDate.toString();
+    }
 
     @Override
     public void onBackPressed() {
