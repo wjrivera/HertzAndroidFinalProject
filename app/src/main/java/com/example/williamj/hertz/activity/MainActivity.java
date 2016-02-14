@@ -64,32 +64,58 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
 
         pickUpDate = (Button) findViewById(R.id.pickUpDate);
-        //dropOffDate = (Button) findViewById(R.id.dropOffDate);
-        //pickUpDate.setOnClickListener(this);
+
+        datePicker = (DatePicker)findViewById(R.id.datePicker);
+
+
+        //FIX THIS BELOW, NEED A DATE PICKER ON CLICK LISTENER FOR BUTTONS
+
+
+//        Calendar today = Calendar.getInstance();        //might not need
+//
+//        datePicker.init(
+//                today.get(Calendar.YEAR),
+//                today.get(Calendar.MONTH),
+//                today.get(Calendar.DAY_OF_MONTH),
+//                new OnDateChangedListener(){
+//
+//                    @Override
+//                    public void onDateChanged(DatePicker view,
+//                                              int year, int monthOfYear,int dayOfMonth) {
+//                        Toast.makeText(getApplicationContext(),
+//                                "onDateChanged", Toast.LENGTH_SHORT).show();
+//
+//                        displayDate.setText(
+//                                "Year: " + year + "\n" +
+//                                        "Month of Year: " + monthOfYear + "\n" +
+//                                        "Day of Month: " + dayOfMonth);
+//
+//                    }});
 
 
 
-        datePicker = (DatePicker) findViewById(R.id.datePicker);
-        //displayDate = (TextView) findViewById(R.id.display_date);
-        //displayDate.setText("Display Date");
-        //changeDate = (Button) findViewById(R.id.change_date_button);
+//        displayDate.setText(currentDate());
+//
+//
+//        pickUpDate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                displayDate.setText(currentDate());
+//            }
+//        });
 
-        displayDate.setText(currentDate());
-        pickUpDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                displayDate.setText(currentDate());
-            }
-        });
+
+
+
+
+
 
 
 
 
 
         manager = getSupportFragmentManager();
-
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
-
         setSupportActionBar(mToolbar);
         assert getSupportActionBar() != null;       //to tell compiler it won't be null
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -106,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         _("Display View done");
 
-// Enable Local Datastore.
+        // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
 
         // Add your initialization code here
@@ -219,6 +245,14 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     }
 
+    //Click on Home
+    public void goCarSelectionButtonClick(View view){
+
+        Log.d("tag", "Car Selection");
+        displayView(10);
+
+    }
+
     //Makes it easier to comment throughout the program
     private void _(String s){
 
@@ -277,6 +311,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 break;
             case 9:
                 fragment = new FindReservationFragment();
+                //title = getString(R.string.title_findreservation);
+                title = " ";
+                break;
+            case 10:
+                fragment = new CarSelection();
                 //title = getString(R.string.title_findreservation);
                 title = " ";
                 break;
