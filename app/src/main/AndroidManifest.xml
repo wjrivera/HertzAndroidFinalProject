@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.williamj.hertz" >
+    package="com.example.williamj.hertz">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -30,26 +30,24 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:theme="@style/MyMaterialTheme" >
+        android:theme="@style/MyMaterialTheme">
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="orientation"
             android:label="@string/app_name"
-            android:screenOrientation="portrait" >
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LoginActivity"
             android:configChanges="orientation"
             android:label="Hertz"
             android:screenOrientation="portrait"
-            android:theme="@style/MyMaterialTheme" >
-        </activity>
+            android:theme="@style/MyMaterialTheme" />
         <activity
             android:name=".activity.SplashScreen"
             android:configChanges="orientation"
             android:label="Hertz"
             android:screenOrientation="portrait"
-            android:theme="@style/MyMaterialTheme" >
+            android:theme="@style/MyMaterialTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -61,7 +59,7 @@
 
         <receiver
             android:name="com.parse.ParsePushBroadcastReceiver"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.parse.push.intent.RECEIVE" />
                 <action android:name="com.parse.push.intent.DELETE" />
@@ -70,12 +68,12 @@
         </receiver>
         <receiver
             android:name="com.parse.GcmBroadcastReceiver"
-            android:permission="com.google.android.c2dm.permission.SEND" >
+            android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
-<!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <!-- IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
                 <category android:name="com.example.williamj.hertz" />
             </intent-filter>
         </receiver>
@@ -94,8 +92,12 @@
 
         <activity
             android:name=".activity.MapsActivity"
-            android:label="@string/title_activity_maps" >
-        </activity>
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".activity.JoinHertz"
+            android:label="@string/title_activity_join_hertz"
+            android:theme="@style/MyMaterialTheme" />
+        <activity android:name=".activity.Credentials"></activity>
     </application>
 
 </manifest>

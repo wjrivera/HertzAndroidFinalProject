@@ -142,7 +142,7 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
                 hideKeyboard();
 
                 _("You've logged in as guest");
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), JoinHertz.class);
                 startActivity(intent);
                 finish();
 
@@ -197,7 +197,7 @@ public class LoginActivity extends AppCompatActivity implements FragmentDrawer.F
                 hideKeyboard();
 
                 _("You've logged in as User3");
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Credentials.class);
                 startActivity(intent);
                 finish();
             }

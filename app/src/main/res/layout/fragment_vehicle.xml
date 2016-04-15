@@ -42,7 +42,6 @@
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="@color/colorPrimaryLight"
-            android:onClick="goCarSelectionButtonClick"
             android:paddingLeft="5dp"/>
         <View
             android:layout_width="0dp"
@@ -58,7 +57,6 @@
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
             android:background="@color/colorPrimaryLight"
-            android:onClick="goCarSelectionButtonClick"
             android:paddingLeft="5dp"/>
 
 

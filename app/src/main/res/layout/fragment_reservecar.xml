@@ -2,18 +2,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="bottom"
     android:orientation="vertical"
     tools:context="com.example.williamj.hertz.activity.ReserveCarFragment"
-    android:layout_marginTop="5dp"
-    android:gravity="center_horizontal"
     android:background="#3c373737">
 
 
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="bottom"
             android:layout_gravity="bottom"
             android:layout_centerVertical="true"
@@ -23,49 +20,68 @@
                 android:id="@+id/datePicker"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
+                android:layout_gravity="top"
+                android:scaleY="0.9"
+                android:scaleX="0.9"
                 android:background="@color/colorAccentLightGrey"/>
 
 
 
-            <Button
-                android:id="@+id/pickUpDate"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:text="Set Pick up Date"
-                android:textSize="15dp"
-                android:textAllCaps="false"
-                android:gravity="center"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                android:textColor="@color/colorPrimaryLight"
-                android:textStyle="bold"
-                android:paddingRight="15dp"
-                android:background="#555555"
-                android:paddingLeft="5dp"
-                android:onClick="findVehicleButtonClick" />
-            <View
+
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="1dp">
-
-            </View>
-
-            <Button
-                android:id="@+id/dropOffDate"
-                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:text="Set Drop off date"
-                android:textSize="15dp"
-                android:textAllCaps="false"
                 android:gravity="center"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                android:textStyle="bold"
-                android:textColor="@color/colorPrimaryLight"
-                android:paddingRight="15dp"
-                android:background="#555555"
-                android:paddingLeft="5dp"
-                android:onClick="findVehicleButtonClick" />
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/pickUpDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Set Pick up Date"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:theme="@style/Widget.AppCompat.Button.Borderless"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textStyle="bold"
+                    android:paddingRight="15dp"
+                    android:background="#555555"
+                    android:paddingLeft="5dp" />
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp">
+
+                </View>
+
+
+                <Button
+                    android:id="@+id/dropOffDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Set Drop off Date"
+                    android:textSize="15dp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:theme="@style/Widget.AppCompat.Button.Borderless"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:paddingRight="15dp"
+                    android:background="#555555"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
 
             <View
                 android:layout_width="wrap_content"
@@ -93,10 +109,5 @@
 
 
         </LinearLayout>
-
-
-
-
-
 
 </RelativeLayout>
