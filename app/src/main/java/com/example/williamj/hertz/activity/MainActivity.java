@@ -1,12 +1,16 @@
 package com.example.williamj.hertz.activity;
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -45,10 +49,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     DatePicker datePicker;      //Need to initialize this
     TextView displayDate;
-    Button checkoutButton;
+    Button CallRoadside;
     int month;
-
-
 
 
     FragmentManager manager;
@@ -67,13 +69,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         pickUpDate = (Button) findViewById(R.id.pickUpDate);
 
-        datePicker = (DatePicker)findViewById(R.id.datePicker);
-
-
-
-
-
-
+        datePicker = (DatePicker) findViewById(R.id.datePicker);
 
 
         manager = getSupportFragmentManager();
@@ -104,10 +100,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         _("Parse done");
 
 
-
     }
-
-
 
 
     public String currentDate() {
@@ -131,14 +124,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         }
 
 
-            //moveTaskToBack(true);
-
-
-
+        //moveTaskToBack(true);
 
 
     }
-
 
 
     @Override
@@ -163,6 +152,58 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void callRoadsideButton(View view) {
+
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:1-800-654-5060"));
+
+        try {
+            startActivity(callIntent);
+        }catch (android.content.ActivityNotFoundException ex){
+            Toast.makeText(getApplicationContext(),"Can't call at this time",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void callReservationButton(View view) {
+
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:1-800-654-3131"));
+
+        try {
+            startActivity(callIntent);
+        }catch (android.content.ActivityNotFoundException ex){
+            Toast.makeText(getApplicationContext(),"Can't call at this time",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    public void callShopButton(View view) {
+
+        Intent callIntent = new Intent(Intent.ACTION_DIAL);
+        callIntent.setData(Uri.parse("tel:1-800-704-4473"));
+
+        try {
+            startActivity(callIntent);
+        }catch (android.content.ActivityNotFoundException ex){
+            Toast.makeText(getApplicationContext(),"Can't call at this time",Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+//    public void callReservationButton(View view) {
+//
+//        Intent callIntent = new Intent(Intent.ACTION_CALL);
+//        callIntent.setData(Uri.parse("tel:1-800-654-3131"));
+//
+//        try {
+//            startActivity(callIntent);
+//        }catch (android.content.ActivityNotFoundException ex){
+//            Toast.makeText(getApplicationContext(),"Can't call at this time",Toast.LENGTH_SHORT).show();
+//        }
+//
+//    }
 
     @Override
     public void onDrawerItemSelected(View view, int position) {

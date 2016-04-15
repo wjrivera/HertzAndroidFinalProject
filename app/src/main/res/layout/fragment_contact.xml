@@ -56,6 +56,7 @@
             android:text="1-800-654-3131"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:onClick="callReservationButton"
             android:textStyle="bold"
             android:background="?attr/colorAccent"
             android:paddingLeft="5dp" />
@@ -85,6 +86,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="1-800-704-4473"
+            android:onClick="callShopButton"
             android:textSize="20dp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             android:textStyle="bold"
