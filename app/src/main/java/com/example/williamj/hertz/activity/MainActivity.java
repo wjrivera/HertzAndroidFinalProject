@@ -1,6 +1,7 @@
 package com.example.williamj.hertz.activity;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.app.Activity;
@@ -44,8 +45,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     DatePicker datePicker;      //Need to initialize this
     TextView displayDate;
-    Button changeDate;
+    Button checkoutButton;
     int month;
+
 
 
 
@@ -66,46 +68,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         pickUpDate = (Button) findViewById(R.id.pickUpDate);
 
         datePicker = (DatePicker)findViewById(R.id.datePicker);
-
-
-        //FIX THIS BELOW, NEED A DATE PICKER ON CLICK LISTENER FOR BUTTONS
-
-
-//        Calendar today = Calendar.getInstance();        //might not need
-//
-//        datePicker.init(
-//                today.get(Calendar.YEAR),
-//                today.get(Calendar.MONTH),
-//                today.get(Calendar.DAY_OF_MONTH),
-//                new OnDateChangedListener(){
-//
-//                    @Override
-//                    public void onDateChanged(DatePicker view,
-//                                              int year, int monthOfYear,int dayOfMonth) {
-//                        Toast.makeText(getApplicationContext(),
-//                                "onDateChanged", Toast.LENGTH_SHORT).show();
-//
-//                        displayDate.setText(
-//                                "Year: " + year + "\n" +
-//                                        "Month of Year: " + monthOfYear + "\n" +
-//                                        "Day of Month: " + dayOfMonth);
-//
-//                    }});
-
-
-
-//        displayDate.setText(currentDate());
-//
-//
-//        pickUpDate.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                displayDate.setText(currentDate());
-//            }
-//        });
-
-
-
 
 
 
@@ -144,6 +106,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
 
     }
+
+
+
 
     public String currentDate() {
         StringBuilder mcurrentDate = new StringBuilder();
@@ -214,6 +179,34 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     }
 
+    public void prevButtonClick1(View v){
+
+        //Log.d("tag", "Reserver a car fragment called");
+        displayView(11);
+
+    }
+
+    public void prevButtonClick2(View v){
+
+        //Log.d("tag", "Reserver a car fragment called");
+        displayView(10);
+
+    }
+
+    public void nextButtonClick1(View v){
+
+        //Log.d("tag", "Reserver a car fragment called");
+        displayView(11);
+
+    }
+
+    public void nextButtonClick2(View v){
+
+        //Log.d("tag", "Reserver a car fragment called");
+        displayView(10);
+
+    }
+
     //Click on Reserve a car
     public void lookupReservationButtonClick(View v){
 
@@ -246,10 +239,35 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     }
 
     //Click on Home
+    public void checkoutClick(View view){
+
+        //Log.d("tag", "Home");
+        displayView(12);
+
+    }
+
+
+    //Click on Home
+    public void finalCheckoutClick(View view){
+
+//        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+//        startActivity(intent);
+
+    }
+
+    //Click on Home
     public void goCarSelectionButtonClick(View view){
 
         Log.d("tag", "Car Selection");
         displayView(10);
+
+    }
+
+    //Click on Home
+    public void congratsButtonClick(View view){
+
+        Log.d("tag", "Car Selection");
+        displayView(13);
 
     }
 
@@ -316,6 +334,21 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 break;
             case 10:
                 fragment = new CarSelection();
+                //title = getString(R.string.title_findreservation);
+                title = " ";
+                break;
+            case 11:
+                fragment = new CarSelection2();                              //add fragment here
+                //title = getString(R.string.title_findreservation);
+                title = " ";
+                break;
+            case 12:
+                fragment = new CheckoutFragment();                              //add fragment here
+                //title = getString(R.string.title_findreservation);
+                title = " ";
+                break;
+            case 13:
+                fragment = new CongratsFragment();                              //add fragment here
                 //title = getString(R.string.title_findreservation);
                 title = " ";
                 break;

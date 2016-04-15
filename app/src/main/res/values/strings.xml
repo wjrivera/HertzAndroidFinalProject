@@ -15,8 +15,6 @@
     <string name="nav_item_privacy">Privacy Policy</string>
 
 
-
-
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>@string/nav_item_home</item>
@@ -41,7 +39,7 @@
     <string name="title_findvehicle">Pick your Vehicle</string>
     <string name="title_findreservation">Reservation</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="privacy_policy_text">     We respect your privacy and are committed
         to protecting the personal data we hold about you. This policy explains

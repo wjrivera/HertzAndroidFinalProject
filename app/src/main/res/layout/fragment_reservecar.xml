@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="bottom"
     android:orientation="vertical"
     tools:context="com.example.williamj.hertz.activity.ReserveCarFragment"
     android:layout_marginTop="5dp"
@@ -9,21 +10,21 @@
     android:background="#3c373737">
 
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="bottom">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:layout_centerVertical="true"
             android:orientation="vertical">
 
             <DatePicker
                 android:id="@+id/datePicker"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/colorAccentLightGrey"/>
 
 
 
@@ -31,7 +32,8 @@
                 android:id="@+id/pickUpDate"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Pickup Date: Friday, November 6, 2015 / 10:00AM"
+                android:layout_gravity="bottom"
+                android:text="Set Pick up Date"
                 android:textSize="15dp"
                 android:textAllCaps="false"
                 android:gravity="center"
@@ -52,7 +54,8 @@
                 android:id="@+id/dropOffDate"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Dropoff Date: Tap to set"
+                android:layout_gravity="bottom"
+                android:text="Set Drop off date"
                 android:textSize="15dp"
                 android:textAllCaps="false"
                 android:gravity="center"
@@ -74,6 +77,7 @@
                 android:id="@+id/vehiclePick"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:text="Done"
                 android:textSize="20dp"
                 android:gravity="right|center"
@@ -89,7 +93,7 @@
 
 
         </LinearLayout>
-    </ScrollView>
+
 
 
 

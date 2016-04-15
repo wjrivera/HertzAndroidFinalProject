@@ -36,9 +36,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="Adrenaline Collection"
+                    android:text="Checkout"
+                    android:textAllCaps="true"
                     android:id="@+id/textView2"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="40dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -89,37 +91,18 @@
                     android:layout_height="50dp"
                     android:gravity="center">
 
-                    <ImageButton
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/prevButton1"
-                        android:src="@drawable/decrease"
-                        android:background="@android:color/transparent"
-                        android:cropToPadding="true"
-                        android:layout_weight="1"
-                        android:onClick="prevButtonClick1"
-                        android:scaleType="fitCenter" />
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="Audi SUV"
+                        android:text="Please verify your rental package"
                         android:id="@+id/textView3"
                         android:textColor="#FFFFFF"
                         android:layout_weight=".5"
                         android:gravity="center" />
 
-                    <ImageButton
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/nextButton1"
-                        android:src="@drawable/increase"
-                        android:background="@android:color/transparent"
-                        android:layout_weight="1"
-                        android:scaleType="fitCenter"
-                        android:onClick="nextButtonClick1"
-                        android:cropToPadding="true" />
+
 
                 </LinearLayout>
 
@@ -134,7 +117,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Or Similar"
+                        android:text="Reserved Date: 4/15/2016"
                         android:id="@+id/textView4"
                         android:textColor="#FFFFFF" />
                 </LinearLayout>
@@ -169,7 +152,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        android:text="$123.00 USD"
+                        android:text="$149.16 USD"
                         android:id="@+id/textView7"
                         android:layout_weight="1"
                         android:gravity="right"
@@ -187,7 +170,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        android:text="Extra day"
+                        android:text="Number of days"
                         android:id="@+id/textView8"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
@@ -196,7 +179,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        android:text="$103.00 USD"
+                        android:text="1 Day"
                         android:id="@+id/textView9"
                         android:gravity="right"
                         android:layout_weight="1"
@@ -207,14 +190,14 @@
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
+                    android:paddingLeft="10dp"
                     android:paddingRight="10dp">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        android:text="Rental Surcharge"
+                        android:text="Pick up Date"
                         android:id="@+id/textView10"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
@@ -223,7 +206,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                        android:text="$10.00 USD"
+                        android:text="4/15/2016"
                         android:id="@+id/textView11"
                         android:layout_weight="1"
                         android:gravity="right"
@@ -236,14 +219,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="5dp">
+                    android:paddingRight="10dp">
 
                     <TextView
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Subtotal"
+                        android:text="Return Date"
                         android:id="@+id/textView19"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
@@ -252,7 +234,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="$133.00 USD"
+                        android:text="4/16/2016"
                         android:id="@+id/textView20"
                         android:layout_weight="1"
                         android:gravity="right"
@@ -271,7 +253,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="Taxes"
+                        android:text="Subtotal"
                         android:id="@+id/textView23"
                         android:layout_weight="1"
                         android:textColor="#000000"/>
@@ -280,7 +262,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:text="$14.16 USD"
+                        android:text="$26.16 USD"
                         android:id="@+id/textView24"
                         android:layout_weight="1"
                         android:gravity="right"
@@ -338,7 +320,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="(Approx Total)"
+                    android:text="(Grand Total)"
                     android:id="@+id/textView27"
                     android:textColor="#ffffff" />
 
@@ -352,12 +334,12 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Next"
+                    android:text="Reserve"
                     android:id="@+id/button"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
-                    android:onClick="checkoutClick"
+                    android:onClick="congratsButtonClick"
                     android:background="?android:attr/selectableItemBackground"
                     android:textColor="#FFFFFF" />
             </RelativeLayout>
